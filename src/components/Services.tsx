@@ -24,7 +24,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 relative">
+    <section id="services" className="py-32 relative scroll-fade-section">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">

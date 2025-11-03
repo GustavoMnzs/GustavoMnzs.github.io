@@ -39,16 +39,14 @@ const Hero = () => {
               Projetos
             </Button>
           </div>
-        </div>
 
-        {/* Scroll Down - Fixed positioning */}
-        <div 
-          onClick={() => scrollToSection("services")}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce z-20"
-        >
-          <div className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300">
-            <span className="text-sm font-light">Scroll Down</span>
-            <ArrowDown className="w-5 h-5" />
+          {/* Scroll Down - Below button with proper spacing */}
+          <div 
+            onClick={() => scrollToSection("services")}
+            className="flex flex-col items-center gap-2 mt-20 cursor-pointer animate-bounce"
+          >
+            <span className="text-sm font-light text-muted-foreground hover:text-primary transition-colors duration-300">Scroll Down</span>
+            <ArrowDown className="w-5 h-5 text-muted-foreground" />
           </div>
         </div>
       </div>
