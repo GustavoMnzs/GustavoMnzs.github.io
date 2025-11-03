@@ -45,20 +45,20 @@ const CustomCursor = () => {
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          transform: `translate(-50%, -50%) scale(${isHovering ? 3 : 1})`,
+          transform: `translate(-50%, -50%) scale(${isHovering ? 2 : 1})`,
         }}
       >
         <div
           className={`rounded-full transition-all duration-300 ${
             isHovering
-              ? 'w-20 h-20 bg-primary/30 backdrop-blur-sm border-2 border-primary'
+              ? 'w-28 h-28 bg-primary/20 backdrop-blur-md border border-primary/40'
               : 'w-3 h-3 bg-primary'
           }`}
         >
           {showText && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-xs font-semibold text-primary-foreground whitespace-nowrap">
-                Ver
+              <span className="text-[10px] font-inter font-medium tracking-wide text-primary whitespace-nowrap">
+                Ver Projeto
               </span>
             </div>
           )}
