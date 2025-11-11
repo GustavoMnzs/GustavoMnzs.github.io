@@ -27,38 +27,38 @@ const Services = () => {
     <section id="services" className="py-32 relative scroll-fade-section">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-primary text-sm mb-6 tracking-[0.3em] uppercase font-medium">O que eu faço?</h2>
-            <p className="text-4xl md:text-6xl font-light text-foreground max-w-4xl mx-auto leading-tight">
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="text-primary text-sm mb-8 tracking-[0.3em] uppercase font-semibold">O que eu faço?</h2>
+            <p className="text-5xl md:text-7xl font-bold text-foreground max-w-5xl mx-auto leading-tight">
               O mais importante não é o que eu faço, mas o que eu posso{" "}
-              <span className="text-primary">entregar pra você</span>.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">entregar pra você</span>.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card
                 key={service.title}
-                className="group relative overflow-hidden border-border/30 bg-card/30 backdrop-blur-xl hover:border-primary/30 hover-lift transition-all duration-500 animate-fade-in-up"
+                className="group relative overflow-hidden border-2 border-border/40 bg-card/40 backdrop-blur-xl hover:border-primary/50 hover-lift transition-all duration-500 animate-fade-in-up shadow-xl hover:shadow-2xl hover:shadow-primary/10"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                {/* Subtle gradient overlay on hover */}
+                {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent" />
                 </div>
                 
                 <CardContent className="p-10 space-y-6 relative">
                   <div className="relative">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center group-hover:bg-primary/10 group-hover:scale-110 transition-all duration-500">
-                      <service.icon className="w-7 h-7 text-primary/80 group-hover:text-primary transition-colors duration-500" />
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-primary/20">
+                      <service.icon className="w-8 h-8 text-primary group-hover:text-primary transition-colors duration-500" />
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-medium text-foreground group-hover:text-primary transition-colors duration-500">
+                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-500">
                     {service.title}
                   </h3>
 
-                  <p className="text-muted-foreground leading-relaxed text-[15px]">
+                  <p className="text-muted-foreground leading-relaxed text-base">
                     {service.description}
                   </p>
                 </CardContent>

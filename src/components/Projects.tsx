@@ -42,23 +42,23 @@ const Projects = () => {
     <section id="projects" className="py-32 relative scroll-fade-section">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-primary text-sm mb-6 tracking-[0.3em] uppercase font-medium">Projetos</h2>
-            <p className="text-4xl md:text-6xl font-light text-foreground leading-tight">
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="text-primary text-sm mb-8 tracking-[0.3em] uppercase font-semibold">Projetos</h2>
+            <p className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
               Trabalhos Selecionados
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card
                 key={project.name}
-                className="group relative overflow-hidden border-border/30 bg-card/30 backdrop-blur-xl hover:border-primary/30 hover-lift transition-all duration-500 animate-fade-in-up"
+                className="group relative overflow-hidden border-2 border-border/40 bg-card/40 backdrop-blur-xl hover:border-primary/50 hover-lift transition-all duration-500 animate-fade-in-up shadow-xl hover:shadow-2xl hover:shadow-primary/10"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                {/* Subtle gradient overlay on hover */}
+                {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] to-transparent" />
                 </div>
 
                 <CardContent className="p-0 relative">
@@ -75,7 +75,7 @@ const Projects = () => {
                       <Button
                         size="lg"
                         onClick={() => window.open(project.url, "_blank")}
-                        className="bg-primary/90 backdrop-blur-sm text-primary-foreground hover:bg-primary hover:scale-105 transition-all duration-300 shadow-lg"
+                        className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg font-medium"
                       >
                         <ExternalLink className="w-5 h-5 mr-2" />
                         Ver Projeto
@@ -84,10 +84,10 @@ const Projects = () => {
                   </div>
 
                   <div className="p-8 space-y-3">
-                    <h3 className="text-2xl font-medium text-foreground group-hover:text-primary transition-colors duration-500">
+                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-500">
                       {project.name}
                     </h3>
-                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground font-medium">
                       <span>{project.type}</span>
                       <span className="w-1 h-1 rounded-full bg-muted-foreground/50" />
                       <span>{project.year}</span>

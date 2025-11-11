@@ -1,7 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import BackgroundGlow from "@/components/BackgroundGlow";
 import { useEffect } from "react";
@@ -37,7 +39,9 @@ const Index = () => {
         <Navigation />
         <Hero />
         <Services />
+        <Skills />
         <Projects />
+        <Experience />
         <Contact />
       </div>
     </div>

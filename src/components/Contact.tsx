@@ -6,11 +6,11 @@ const Contact = () => {
     <section id="contact" className="py-32 relative scroll-fade-section">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-primary text-sm mb-6 tracking-[0.3em] uppercase font-medium">Entre em Contato</h2>
-            <p className="text-4xl md:text-6xl font-light text-foreground mb-8 leading-tight">
+          <div className="text-center mb-24 animate-fade-in">
+            <h2 className="text-primary text-sm mb-8 tracking-[0.3em] uppercase font-semibold">Entre em Contato</h2>
+            <p className="text-5xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
               Vamos criar algo{" "}
-              <span className="text-primary">extraordinário</span> juntos.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">extraordinário</span> juntos.
             </p>
           </div>
 
