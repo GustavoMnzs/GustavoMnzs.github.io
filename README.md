@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# Gustavo Menezes - Portfolio
 
-## Project info
+Portfólio profissional desenvolvido com tecnologias modernas para apresentar projetos e serviços de desenvolvimento web.
 
-**URL**: https://lovable.dev/projects/efae01bd-265c-4eea-8b23-af3e3cddd00e
+## Como executar o projeto
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/efae01bd-265c-4eea-8b23-af3e3cddd00e) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Requisitos: Node.js & npm instalados - [instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Instalar as dependências
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Iniciar o servidor de desenvolvimento
 npm run dev
+
+# Build para produção
+npm run build
+
+# Preview do build de produção
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Tecnologias utilizadas
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Este projeto foi desenvolvido com:
 
-**Use GitHub Codespaces**
+- **Vite** - Build tool e dev server
+- **TypeScript** - Tipagem estática
+- **React** - Biblioteca UI
+- **shadcn/ui** - Componentes UI
+- **Tailwind CSS** - Framework CSS
+- **Lucide React** - Ícones
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deploy
 
-## What technologies are used for this project?
+Para fazer o deploy do projeto:
 
-This project is built with:
+1. Execute `npm run build` para gerar os arquivos de produção
+2. Os arquivos estarão na pasta `dist/`
+3. Faça upload dos arquivos para seu servidor ou serviço de hospedagem
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Contato
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/efae01bd-265c-4eea-8b23-af3e3cddd00e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Email**: gustavomnzs1@gmail.com
+- **LinkedIn**: [gustavo-menezes-dev](https://www.linkedin.com/in/gustavo-menezes-dev/)
+- **WhatsApp**: (61) 99266-2886
