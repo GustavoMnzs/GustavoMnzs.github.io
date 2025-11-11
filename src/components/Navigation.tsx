@@ -20,22 +20,29 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50"
+          ? "bg-background/60 backdrop-blur-2xl border-b border-border/30 shadow-lg"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection("hero")}>
-            <img src={logo} alt="Gustavo Menezes Logo" className="h-16 w-auto" />
+          <div 
+            className="flex items-center space-x-2 cursor-pointer group" 
+            onClick={() => scrollToSection("hero")}
+          >
+            <img 
+              src={logo} 
+              alt="Gustavo Menezes Logo" 
+              className="h-14 w-auto transition-transform duration-500 group-hover:scale-105" 
+            />
           </div>
 
           <Button
             variant="outline"
             onClick={() => scrollToSection("contact")}
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-500 rounded-xl px-6 backdrop-blur-sm"
           >
             Contato
           </Button>
