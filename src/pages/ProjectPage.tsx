@@ -124,14 +124,29 @@ const ProjectPage = () => {
                       <span className="text-xs text-muted-foreground mono truncate">{project.url}</span>
                     </div>
                   </div>
-                  <div className="aspect-video bg-background">
+                  {/* Desktop: scaled iframe */}
+                  <div className="hidden md:block relative" style={{ height: '450px', overflow: 'hidden' }}>
                     <iframe
                       src={project.url}
                       title={`Preview de ${project.name}`}
-                      className="w-full h-full border-0"
+                      className="absolute top-0 left-0 border-0"
+                      style={{ width: '1440px', height: '900px', transform: 'scale(0.555)', transformOrigin: 'top left' }}
                       loading="lazy"
                       sandbox="allow-scripts allow-same-origin"
                     />
+                  </div>
+                  {/* Mobile: link card instead of iframe */}
+                  <div
+                    className="md:hidden flex items-center justify-center py-12 cursor-pointer group"
+                    onClick={() => window.open(project.url, "_blank")}
+                  >
+                    <div className="text-center space-y-3">
+                      <div className="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
+                        <ExternalLink className="w-6 h-6 text-primary" />
+                      </div>
+                      <p className="text-sm text-muted-foreground">Toque para abrir o site</p>
+                      <p className="text-xs text-primary mono">{project.url}</p>
+                    </div>
                   </div>
                 </motion.div>
               )}
