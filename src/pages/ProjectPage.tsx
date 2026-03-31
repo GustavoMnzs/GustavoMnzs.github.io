@@ -124,13 +124,12 @@ const ProjectPage = () => {
                       <span className="text-xs text-muted-foreground mono truncate">{project.url}</span>
                     </div>
                   </div>
-                  {/* Desktop: scaled iframe */}
-                  <div className="hidden md:block relative" style={{ height: '450px', overflow: 'hidden' }}>
+                  {/* Desktop: original aspect-video iframe */}
+                  <div className="hidden md:block aspect-video bg-background">
                     <iframe
                       src={project.url}
                       title={`Preview de ${project.name}`}
-                      className="absolute top-0 left-0 border-0"
-                      style={{ width: '1440px', height: '900px', transform: 'scale(0.555)', transformOrigin: 'top left' }}
+                      className="w-full h-full border-0"
                       loading="lazy"
                       sandbox="allow-scripts allow-same-origin"
                     />
