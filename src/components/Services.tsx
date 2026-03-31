@@ -1,66 +1,42 @@
-import { Monitor, FileText, Search } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Cpu, Layers, Rocket, Bot, GitBranch, BarChart3 } from "lucide-react";
+import SpotlightCard from "./SpotlightCard";
 
 const services = [
-  {
-    icon: Monitor,
-    title: "Websites",
-    description:
-      "Sites institucionais modernos em WordPress/Elementor, com performance, segurança e escalabilidade desde o dia 1.",
-  },
-  {
-    icon: FileText,
-    title: "Landing Pages",
-    description:
-      "Páginas focadas em conversão para lançamentos, captação de leads e campanhas rápidas, responsivas e mensuráveis.",
-  },
-  {
-    icon: Search,
-    title: "SEO Técnico & Conteúdo",
-    description:
-      "Estrutura limpa, schema, velocidade e copy alinhada à busca para ranquear, gerar tráfego qualificado e reduzir CAC.",
-  },
+  { icon: Rocket, title: "Criação de Produtos", description: "Do conceito ao MVP. Arquiteto e construo produtos digitais completos, validados e prontos para escalar." },
+  { icon: Bot, title: "Soluções com IA", description: "Integro inteligência artificial para automatizar processos, resolver problemas complexos e gerar vantagem competitiva." },
+  { icon: Layers, title: "Arquitetura de Sistemas", description: "Design de sistemas robustos, escaláveis e bem estruturados. Do banco de dados à interface do usuário." },
+  { icon: GitBranch, title: "Liderança Técnica", description: "Atuo como CTO, liderando times de desenvolvimento, definindo stack e garantindo qualidade de entrega." },
+  { icon: Cpu, title: "Automação de Processos", description: "Transformo processos manuais em fluxos automatizados. Reduzi assinatura de contratos de 10 dias para 1." },
+  { icon: BarChart3, title: "Refatoração e Redesign", description: "Modernizo sistemas legados com arquitetura limpa, melhor UX e performance otimizada." },
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 relative scroll-fade-section">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-24 relative scroll-fade-section">
+      <div className="section-container">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-primary text-xs mb-6 tracking-[0.25em] uppercase font-semibold">Serviços</h2>
-            <p className="text-4xl md:text-6xl font-semibold text-foreground max-w-4xl mx-auto leading-tight">
-              O que eu posso{" "}
-              <span className="text-primary">entregar pra você</span>
-            </p>
+          <div className="text-center mb-14">
+            <span className="text-primary text-xs tracking-[0.3em] uppercase font-semibold mono">Serviços</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4 leading-tight">
+              O que eu <span className="text-primary">construo</span>
+            </h2>
+            <p className="text-muted-foreground mt-3 max-w-lg mx-auto">Não faço só código. Crio soluções que transformam negócios.</p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card
-                key={service.title}
-                className="group relative overflow-hidden border-2 border-primary/20 bg-card/70 backdrop-blur-xl hover:border-primary/50 hover:bg-card/90 transition-all duration-300 animate-fade-in-up shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_hsl(180,100%,50%,0.2)]"
-                style={{ animationDelay: `${index * 100}ms` }}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {services.map((s, i) => (
+              <SpotlightCard
+                key={s.title}
+                className="group rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] animate-fade-in-up"
+                style={{ animationDelay: `${i * 100}ms` }}
               >
-                {/* Subtle glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent" />
-                </div>
-                
-                <CardContent className="p-8 space-y-5 relative">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
-                    <service.icon className="w-6 h-6 text-primary" />
+                <div className="p-6 space-y-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
+                    <s.icon className="w-5 h-5 text-primary" />
                   </div>
-
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-muted-foreground/80 leading-relaxed text-[15px]">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300">{s.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{s.description}</p>
+                </div>
+              </SpotlightCard>
             ))}
           </div>
         </div>

@@ -1,0 +1,428 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - img "Logo" [ref=e5]
+  - generic [ref=e9]:
+    - navigation [ref=e11]:
+      - img "GM" [ref=e13] [cursor=pointer]
+      - generic [ref=e15]:
+        - button "Sobre" [ref=e16] [cursor=pointer]
+        - button "Projetos" [ref=e17] [cursor=pointer]
+        - button "Serviços" [ref=e18] [cursor=pointer]
+        - button "Skills" [ref=e19] [cursor=pointer]
+        - button "Experiência" [ref=e20] [cursor=pointer]
+      - button "Contato" [ref=e22] [cursor=pointer]
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - img [ref=e27]
+          - generic [ref=e29]: CTO & Product Builder
+        - generic [ref=e30]:
+          - heading "Gustavo Menezes" [level=1] [ref=e31]
+          - paragraph [ref=e32]: Construo produtos digitais do zero, resolvo problemas complexos com IA e lidero times de tecnologia como CTO.
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: 6+
+            - generic [ref=e36]: Produtos criados
+          - generic [ref=e37]:
+            - generic [ref=e38]: CTO
+            - generic [ref=e39]: em 5 empresas
+          - generic [ref=e40]:
+            - generic [ref=e41]: 10→1
+            - generic [ref=e42]: dias em contratos
+        - generic [ref=e43]:
+          - button "Ver Projetos" [ref=e44] [cursor=pointer]
+          - button "Falar Comigo" [ref=e45] [cursor=pointer]
+      - generic [ref=e48] [cursor=pointer]: Scroll
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - text: Sobre
+        - heading "Quem é Gustavo" [level=2] [ref=e57]
+      - generic [ref=e58]:
+        - generic [ref=e60]:
+          - img "Gustavo Menezes" [ref=e62]
+          - generic [ref=e63]: Brasília, BR
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: Sou desenvolvedor e empreendedor de Brasília, especializado em criar produtos digitais do zero e resolver problemas complexos com inteligência artificial.
+          - paragraph [ref=e66]: Atuo como CTO em múltiplas empresas simultaneamente, liderando times de tecnologia, definindo arquitetura de sistemas e garantindo que cada produto entregue valor real. Já criei plataformas de educação, hubs de tecnologia, sistemas de logística e ferramentas de automação.
+          - paragraph [ref=e67]: "Meu diferencial é a visão completa: entendo de negócio, design e código. Isso me permite tomar decisões técnicas que fazem sentido pro produto e pro usuário final."
+          - generic [ref=e68]:
+            - link "LinkedIn" [ref=e69] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/gustavo-menezes-dev/
+              - img [ref=e70]
+              - text: LinkedIn
+            - link "GitHub" [ref=e72] [cursor=pointer]:
+              - /url: https://github.com/
+              - img [ref=e73]
+              - text: GitHub
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - text: "0"
+        - paragraph [ref=e82]: Produtos entregues
+      - generic [ref=e83]:
+        - text: "0"
+        - paragraph [ref=e84]: Empresas como CTO
+      - generic [ref=e85]:
+        - generic [ref=e86]: 0x
+        - paragraph [ref=e87]: Mais rápido em contratos
+      - generic [ref=e88]:
+        - generic [ref=e89]: 0+
+        - paragraph [ref=e90]: Times liderados
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - text: Projetos
+        - heading "Produtos que construí" [level=2] [ref=e97]
+        - paragraph [ref=e98]: De startups a sistemas enterprise, cada projeto com impacto real.
+      - generic [ref=e100] [cursor=pointer]:
+        - generic [ref=e101]: Destaque
+        - generic [ref=e102]:
+          - img [ref=e104]
+          - generic [ref=e106]:
+            - heading "Olym" [level=3] [ref=e107]
+            - text: Fundador e CTO
+        - paragraph [ref=e108]: Meu produto principal. Plataforma criada do zero, da concepção à produção. Arquitetura full-stack com React, Node.js e inteligência artificial integrada.
+        - generic [ref=e109]:
+          - generic [ref=e110]: React
+          - generic [ref=e111]: TypeScript
+          - generic [ref=e112]: Node.js
+          - generic [ref=e113]: PostgreSQL
+          - generic [ref=e114]: IA
+          - generic [ref=e115]: Vercel
+        - button "Ver Case Study" [ref=e116]:
+          - text: Ver Case Study
+          - img
+      - generic [ref=e117]:
+        - generic [ref=e119] [cursor=pointer]:
+          - generic [ref=e120]:
+            - generic [ref=e121]:
+              - img [ref=e123]
+              - generic [ref=e135]:
+                - heading "Social IA" [level=3] [ref=e136]
+                - text: CTO
+            - img [ref=e138]
+          - paragraph [ref=e141]: Plataforma de IA para redes sociais. Automação e geração de conteúdo.
+          - generic [ref=e142]:
+            - generic [ref=e143]: IA
+            - generic [ref=e144]: SaaS
+            - generic [ref=e145]: CTO
+        - generic [ref=e147] [cursor=pointer]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - img [ref=e151]
+              - generic [ref=e154]:
+                - heading "Sabido" [level=3] [ref=e155]
+                - text: CTO
+            - img [ref=e157]
+          - paragraph [ref=e160]: Plataforma educacional inteligente. Liderança técnica completa.
+          - generic [ref=e161]:
+            - generic [ref=e162]: EdTech
+            - generic [ref=e163]: CTO
+            - generic [ref=e164]: IA
+        - generic [ref=e166] [cursor=pointer]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - img [ref=e170]
+              - generic [ref=e172]:
+                - heading "AtlasBase" [level=3] [ref=e173]
+                - text: CTO
+            - img [ref=e175]
+          - paragraph [ref=e178]: Infraestrutura de dados. Arquitetura e liderança técnica.
+          - generic [ref=e179]:
+            - generic [ref=e180]: Data
+            - generic [ref=e181]: CTO
+            - generic [ref=e182]: Arquitetura
+        - generic [ref=e184] [cursor=pointer]:
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - img [ref=e188]
+              - generic [ref=e192]:
+                - heading "TicHub" [level=3] [ref=e193]
+                - text: CTO
+            - img [ref=e195]
+          - paragraph [ref=e198]: Hub de tecnologia. Estratégia técnica e desenvolvimento.
+          - generic [ref=e199]:
+            - generic [ref=e200]: Tech
+            - generic [ref=e201]: CTO
+            - generic [ref=e202]: Plataforma
+        - generic [ref=e204] [cursor=pointer]:
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - img [ref=e208]
+              - generic [ref=e211]:
+                - heading "VestGo" [level=3] [ref=e212]
+                - text: CTO
+            - img [ref=e214]
+          - paragraph [ref=e217]: Plataforma de vestibular. Liderança técnica e arquitetura.
+          - generic [ref=e218]:
+            - generic [ref=e219]: EdTech
+            - generic [ref=e220]: CTO
+            - generic [ref=e221]: Full-Stack
+        - generic [ref=e223] [cursor=pointer]:
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - img [ref=e227]
+              - generic [ref=e232]:
+                - heading "Wolfex" [level=3] [ref=e233]
+                - text: Tech Lead
+            - img [ref=e235]
+          - paragraph [ref=e238]: Redesign e refatoração total do sistema de logística.
+          - generic [ref=e239]:
+            - generic [ref=e240]: Logística
+            - generic [ref=e241]: Tech Lead
+            - generic [ref=e242]: Redesign
+        - generic [ref=e244] [cursor=pointer]:
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - img [ref=e248]
+              - generic [ref=e251]:
+                - heading "Condor | Contratos" [level=3] [ref=e252]
+                - text: Dev Full-Stack
+            - img [ref=e254]
+          - paragraph [ref=e257]: Sistema que reduziu contratos de 10 dias para 1 dia.
+          - generic [ref=e258]:
+            - generic [ref=e259]: Automação
+            - generic [ref=e260]: Contratos
+            - generic [ref=e261]: 10→1 dia
+        - generic [ref=e263] [cursor=pointer]:
+          - generic [ref=e264]:
+            - generic [ref=e265]:
+              - img [ref=e267]
+              - generic [ref=e271]:
+                - heading "Condor | Facilities" [level=3] [ref=e272]
+                - text: Dev Full-Stack
+            - img [ref=e274]
+          - paragraph [ref=e277]: Sistema completo de facilities e gestão de operações.
+          - generic [ref=e278]:
+            - generic [ref=e279]: Facilities
+            - generic [ref=e280]: Sistemas
+            - generic [ref=e281]: Full-Stack
+    - generic [ref=e286]:
+      - generic [ref=e287]:
+        - text: Serviços
+        - heading "O que eu construo" [level=2] [ref=e288]
+        - paragraph [ref=e289]: Não faço só código. Crio soluções que transformam negócios.
+      - generic [ref=e290]:
+        - generic [ref=e292]:
+          - img [ref=e294]
+          - heading "Criação de Produtos" [level=3] [ref=e299]
+          - paragraph [ref=e300]: Do conceito ao MVP. Arquiteto e construo produtos digitais completos, validados e prontos para escalar.
+        - generic [ref=e302]:
+          - img [ref=e304]
+          - heading "Soluções com IA" [level=3] [ref=e307]
+          - paragraph [ref=e308]: Integro inteligência artificial para automatizar processos, resolver problemas complexos e gerar vantagem competitiva.
+        - generic [ref=e310]:
+          - img [ref=e312]
+          - heading "Arquitetura de Sistemas" [level=3] [ref=e316]
+          - paragraph [ref=e317]: Design de sistemas robustos, escaláveis e bem estruturados. Do banco de dados à interface do usuário.
+        - generic [ref=e319]:
+          - img [ref=e321]
+          - heading "Liderança Técnica" [level=3] [ref=e325]
+          - paragraph [ref=e326]: Atuo como CTO, liderando times de desenvolvimento, definindo stack e garantindo qualidade de entrega.
+        - generic [ref=e328]:
+          - img [ref=e330]
+          - heading "Automação de Processos" [level=3] [ref=e333]
+          - paragraph [ref=e334]: Transformo processos manuais em fluxos automatizados. Reduzi assinatura de contratos de 10 dias para 1.
+        - generic [ref=e336]:
+          - img [ref=e338]
+          - heading "Refatoração e Redesign" [level=3] [ref=e340]
+          - paragraph [ref=e341]: Modernizo sistemas legados com arquitetura limpa, melhor UX e performance otimizada.
+    - generic [ref=e346]:
+      - generic [ref=e347]:
+        - text: Competências
+        - heading "Stack e Habilidades" [level=2] [ref=e348]
+      - generic [ref=e349]:
+        - generic [ref=e351]:
+          - generic [ref=e352]:
+            - img [ref=e354]
+            - heading "Frontend" [level=3] [ref=e358]
+          - generic [ref=e359]:
+            - generic [ref=e360]: React
+            - generic [ref=e361]: TypeScript
+            - generic [ref=e362]: Next.js
+            - generic [ref=e363]: Tailwind CSS
+            - generic [ref=e364]: Shadcn/UI
+        - generic [ref=e366]:
+          - generic [ref=e367]:
+            - img [ref=e369]
+            - heading "Backend e Infra" [level=3] [ref=e372]
+          - generic [ref=e373]:
+            - generic [ref=e374]: Node.js
+            - generic [ref=e375]: Python
+            - generic [ref=e376]: PostgreSQL
+            - generic [ref=e377]: Supabase
+            - generic [ref=e378]: APIs REST
+        - generic [ref=e380]:
+          - generic [ref=e381]:
+            - img [ref=e383]
+            - heading "Inteligência Artificial" [level=3] [ref=e393]
+          - generic [ref=e394]:
+            - generic [ref=e395]: LLMs
+            - generic [ref=e396]: Prompt Engineering
+            - generic [ref=e397]: Automação com IA
+            - generic [ref=e398]: Agentes
+        - generic [ref=e400]:
+          - generic [ref=e401]:
+            - img [ref=e403]
+            - heading "Design e UX" [level=3] [ref=e409]
+          - generic [ref=e410]:
+            - generic [ref=e411]: Figma
+            - generic [ref=e412]: UI/UX
+            - generic [ref=e413]: Design Systems
+            - generic [ref=e414]: Prototipagem
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - img [ref=e419]
+            - heading "DevOps e Tools" [level=3] [ref=e421]
+          - generic [ref=e422]:
+            - generic [ref=e423]: Git
+            - generic [ref=e424]: CI/CD
+            - generic [ref=e425]: Docker
+            - generic [ref=e426]: Vercel
+            - generic [ref=e427]: Linux
+        - generic [ref=e429]:
+          - generic [ref=e430]:
+            - img [ref=e432]
+            - heading "Liderança" [level=3] [ref=e437]
+          - generic [ref=e438]:
+            - generic [ref=e439]: CTO
+            - generic [ref=e440]: Scrum
+            - generic [ref=e441]: Gestão de Times
+            - generic [ref=e442]: Produto
+            - generic [ref=e443]: Arquitetura
+    - generic [ref=e448]:
+      - generic [ref=e449]:
+        - text: Experiência
+        - heading "Trajetória Profissional" [level=2] [ref=e450]
+      - generic [ref=e451]:
+        - generic [ref=e454]:
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - heading "Fundador e CTO" [level=3] [ref=e458]
+              - paragraph [ref=e462]: Olym
+            - list [ref=e463]:
+              - listitem [ref=e464]:
+                - generic [ref=e465]: ●
+                - generic [ref=e466]: Criação do produto do zero, da ideia à produção
+              - listitem [ref=e467]:
+                - generic [ref=e468]: ●
+                - generic [ref=e469]: Arquitetura full-stack com React, Node.js e IA
+              - listitem [ref=e470]:
+                - generic [ref=e471]: ●
+                - generic [ref=e472]: Definição de roadmap e estratégia de produto
+          - generic [ref=e473]: Atual
+        - generic [ref=e476]:
+          - generic [ref=e477]:
+            - generic [ref=e478]:
+              - heading "CTO" [level=3] [ref=e480]
+              - paragraph [ref=e484]: Social IA, Sabido, AtlasBase, TicHub, VestGo
+            - list [ref=e485]:
+              - listitem [ref=e486]:
+                - generic [ref=e487]: ●
+                - generic [ref=e488]: Liderança técnica de múltiplos produtos simultaneamente
+              - listitem [ref=e489]:
+                - generic [ref=e490]: ●
+                - generic [ref=e491]: Definição de stack, arquitetura e padrões de desenvolvimento
+              - listitem [ref=e492]:
+                - generic [ref=e493]: ●
+                - generic [ref=e494]: Gestão de times e entrega contínua de features
+          - generic [ref=e495]: Atual
+        - generic [ref=e498]:
+          - generic [ref=e499]:
+            - generic [ref=e500]:
+              - heading "Suporte Técnico e Desenvolvedor Web" [level=3] [ref=e502]
+              - paragraph [ref=e506]: Gálata Tecnologia
+            - list [ref=e507]:
+              - listitem [ref=e508]:
+                - generic [ref=e509]: ●
+                - generic [ref=e510]: Suporte ao cliente e resolução de problemas via tickets
+              - listitem [ref=e511]:
+                - generic [ref=e512]: ●
+                - generic [ref=e513]: Desenvolvimento e migração de sites
+              - listitem [ref=e514]:
+                - generic [ref=e515]: ●
+                - generic [ref=e516]: Trabalho em equipe junto ao time de desenvolvimento
+          - generic [ref=e517]: Atual
+        - generic [ref=e520]:
+          - generic [ref=e521]:
+            - generic [ref=e522]:
+              - heading "Tech Lead e Desenvolvedor" [level=3] [ref=e524]
+              - paragraph [ref=e525]: Wolfex
+            - list [ref=e526]:
+              - listitem [ref=e527]:
+                - generic [ref=e528]: ●
+                - generic [ref=e529]: Liderança técnica da refatoração completa do sistema de logística
+              - listitem [ref=e530]:
+                - generic [ref=e531]: ●
+                - generic [ref=e532]: Nova arquitetura, nova interface, melhor performance
+          - generic [ref=e533]: 2025/2026
+        - generic [ref=e536]:
+          - generic [ref=e537]:
+            - generic [ref=e538]:
+              - heading "Desenvolvedor Full-Stack" [level=3] [ref=e540]
+              - paragraph [ref=e541]: Condor
+            - list [ref=e542]:
+              - listitem [ref=e543]:
+                - generic [ref=e544]: ●
+                - generic [ref=e545]: Construção completa do sistema de facilities para gestão de operações
+              - listitem [ref=e546]:
+                - generic [ref=e547]: ●
+                - generic [ref=e548]: Construção completa do sistema de contratos que reduziu o processo de 10 dias para 1 dia
+              - listitem [ref=e549]:
+                - generic [ref=e550]: ●
+                - generic [ref=e551]: Automação de fluxos e assinaturas digitais
+          - generic [ref=e552]: 2025/2026
+    - generic [ref=e555]:
+      - generic [ref=e557]:
+        - generic [ref=e558]:
+          - text: Contato
+          - heading "Vamos conversar" [level=2] [ref=e559]
+          - paragraph [ref=e560]: Tem um projeto, produto ou desafio técnico? Me chama.
+        - generic [ref=e561]:
+          - generic [ref=e562]:
+            - link "Email gustavomnzs1@gmail.com" [ref=e563] [cursor=pointer]:
+              - /url: mailto:gustavomnzs1@gmail.com
+              - img [ref=e565]
+              - generic [ref=e568]:
+                - paragraph [ref=e569]: Email
+                - paragraph [ref=e570]: gustavomnzs1@gmail.com
+              - img [ref=e571]
+            - link "WhatsApp (61) 99266-2886" [ref=e574] [cursor=pointer]:
+              - /url: https://wa.me/5561992662886
+              - img [ref=e576]
+              - generic [ref=e578]:
+                - paragraph [ref=e579]: WhatsApp
+                - paragraph [ref=e580]: (61) 99266-2886
+              - img [ref=e581]
+            - link "Telefone (61) 99266-2886" [ref=e584] [cursor=pointer]:
+              - /url: tel:+5561992662886
+              - img [ref=e586]
+              - generic [ref=e588]:
+                - paragraph [ref=e589]: Telefone
+                - paragraph [ref=e590]: (61) 99266-2886
+              - img [ref=e591]
+            - generic [ref=e594]:
+              - img [ref=e596]
+              - generic [ref=e599]:
+                - paragraph [ref=e600]: Localização
+                - paragraph [ref=e601]: Brasília, Brasil
+          - generic [ref=e605]:
+            - img [ref=e607]
+            - generic [ref=e610]:
+              - heading "Pronto para começar?" [level=3] [ref=e611]
+              - paragraph [ref=e612]: Vamos transformar sua ideia em produto.
+            - generic [ref=e613]:
+              - button "Chamar no WhatsApp" [ref=e614] [cursor=pointer]
+              - button "Enviar Email" [ref=e615] [cursor=pointer]
+      - generic [ref=e618]:
+        - generic [ref=e619]:
+          - paragraph [ref=e620]: © 2025 Gustavo Menezes
+          - generic [ref=e621]: ·
+          - generic [ref=e622]: React + Tailwind
+        - generic [ref=e623]:
+          - link "WhatsApp" [ref=e624] [cursor=pointer]:
+            - /url: https://wa.me/5561992662886
+          - link "LinkedIn" [ref=e625] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/gustavo-menezes-dev/
+          - link "GitHub" [ref=e626] [cursor=pointer]:
+            - /url: https://github.com/

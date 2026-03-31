@@ -1,90 +1,76 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Code2, Palette, Zap, Search, Smartphone, Users } from "lucide-react";
+import { Code2, Brain, Server, Palette, Terminal, Users } from "lucide-react";
+import SpotlightCard from "./SpotlightCard";
 
 const skillCategories = [
   {
     icon: Code2,
-    title: "Desenvolvimento",
-    skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "WordPress", "Elementor"],
+    title: "Frontend",
+    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Shadcn/UI"],
+  },
+  {
+    icon: Server,
+    title: "Backend e Infra",
+    skills: ["Node.js", "Python", "PostgreSQL", "Supabase", "APIs REST"],
+  },
+  {
+    icon: Brain,
+    title: "Inteligência Artificial",
+    skills: ["LLMs", "Prompt Engineering", "Automação com IA", "Agentes"],
   },
   {
     icon: Palette,
-    title: "Design & UX",
-    skills: ["Figma", "UX/UI", "Responsive Design", "Prototipagem"],
+    title: "Design e UX",
+    skills: ["Figma", "UI/UX", "Design Systems", "Prototipagem"],
   },
   {
-    icon: Zap,
-    title: "Performance",
-    skills: ["Otimização", "Core Web Vitals", "Testes Automatizados", "Mobile First"],
-  },
-  {
-    icon: Search,
-    title: "SEO & Marketing",
-    skills: ["SEO Técnico", "Schema Markup", "Analytics", "Conversão"],
-  },
-  {
-    icon: Smartphone,
-    title: "Tecnologias",
-    skills: ["CMS", "Git", "APIs", "Integrações"],
+    icon: Terminal,
+    title: "DevOps e Tools",
+    skills: ["Git", "CI/CD", "Docker", "Vercel", "Linux"],
   },
   {
     icon: Users,
-    title: "Metodologias",
-    skills: ["Scrum", "Kanban", "Agile", "Trabalho em Equipe"],
+    title: "Liderança",
+    skills: ["CTO", "Scrum", "Gestão de Times", "Produto", "Arquitetura"],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-32 relative scroll-fade-section">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-24 relative scroll-fade-section">
+      <div className="section-container">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-primary text-xs mb-6 tracking-[0.25em] uppercase font-semibold">
-              Competências
+          <div className="text-center mb-14">
+            <span className="text-primary text-xs tracking-[0.3em] uppercase font-semibold mono">Competências</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4 leading-tight">
+              Stack e <span className="text-primary">Habilidades</span>
             </h2>
-            <p className="text-4xl md:text-6xl font-semibold text-foreground leading-tight max-w-4xl mx-auto">
-              Tecnologias e{" "}
-              <span className="text-primary">
-                Habilidades
-              </span>
-            </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillCategories.map((category, index) => (
-              <Card
-                key={category.title}
-                className="group relative overflow-hidden border-2 border-primary/20 bg-card/70 backdrop-blur-xl hover:border-primary/50 hover:bg-card/90 transition-all duration-300 animate-fade-in-up shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_hsl(180,100%,50%,0.2)]"
-                style={{ animationDelay: `${index * 100}ms` }}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {skillCategories.map((cat, i) => (
+              <SpotlightCard
+                key={cat.title}
+                className="group rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] animate-fade-in-up"
+                style={{ animationDelay: `${i * 100}ms` }}
               >
-                {/* Subtle glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent" />
-                </div>
-
-                <CardContent className="p-7 space-y-5 relative">
+                <div className="p-6 space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
-                      <category.icon className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-all duration-300">
+                      <cat.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                      {category.title}
-                    </h3>
+                    <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors duration-300">{cat.title}</h3>
                   </div>
-
                   <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
+                    {cat.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1.5 text-sm bg-primary/5 text-foreground/70 rounded-lg border border-primary/10 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300"
+                        className="px-2.5 py-1.5 text-xs bg-white/[0.04] text-muted-foreground rounded-lg border border-white/[0.06] group-hover:border-white/[0.1] group-hover:text-foreground/80 transition-all duration-300 mono"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </SpotlightCard>
             ))}
           </div>
         </div>
