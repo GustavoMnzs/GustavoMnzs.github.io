@@ -44,7 +44,7 @@ const About = () => {
 
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
-                  href="https://www.linkedin.com/in/gustavo-menezes-dev/"
+                  href="https://www.linkedin.com/in/gustavo-ai/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-muted-foreground hover:text-primary hover:border-white/[0.1] transition-all duration-300"
@@ -53,7 +53,7 @@ const About = () => {
                   LinkedIn
                 </a>
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/GustavoMnzs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/[0.06] text-sm text-muted-foreground hover:text-primary hover:border-white/[0.1] transition-all duration-300"

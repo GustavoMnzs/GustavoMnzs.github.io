@@ -125,14 +125,12 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto pt-8 border-t border-white/[0.06]">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-3">
-              <p className="font-light">© 2025 Gustavo Menezes</p>
-              <span className="text-white/[0.1]">·</span>
-              <span className="text-xs mono text-muted-foreground/50">React + Tailwind</span>
+              <p className="font-light">© {new Date().getFullYear()} Gustavo Menezes</p>
             </div>
             <div className="flex gap-5 items-center">
               <a href="https://wa.me/5561992662886" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300" aria-label="WhatsApp">WhatsApp</a>
-              <a href="https://www.linkedin.com/in/gustavo-menezes-dev/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300" aria-label="LinkedIn">LinkedIn</a>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300" aria-label="GitHub">GitHub</a>
+              <a href="https://www.linkedin.com/in/gustavo-ai/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://github.com/GustavoMnzs" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors duration-300" aria-label="GitHub">GitHub</a>
             </div>
           </div>
         </div>
