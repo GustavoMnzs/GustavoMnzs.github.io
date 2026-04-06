@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +17,9 @@ const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [drawerReady, setDrawerReady] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [pillStyle, setPillStyle] = useState({ left: 0, width: 0, opacity: 0 });
+  const navRef = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -24,15 +27,25 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Active section detection with better threshold
   useEffect(() => {
     const ids = ["about", "projects", "services", "skills", "experience", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
+        // Find the entry with the largest intersection ratio
+        let best: IntersectionObserverEntry | null = null;
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
+          if (entry.isIntersecting) {
+            if (!best || entry.intersectionRatio > best.intersectionRatio) {
+              best = entry;
+            }
+          }
         });
+        if (best) {
+          setActiveSection((best as IntersectionObserverEntry).target.id);
+        }
       },
-      { threshold: 0.3, rootMargin: "-80px 0px -50% 0px" }
+      { threshold: [0.1, 0.3, 0.5], rootMargin: "-100px 0px -40% 0px" }
     );
     ids.forEach((id) => {
       const el = document.getElementById(id);
@@ -41,6 +54,23 @@ const Navigation = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Update sliding pill position when active section changes
+  useEffect(() => {
+    const btn = buttonRefs.current.get(activeSection);
+    const nav = navRef.current;
+    if (btn && nav) {
+      const navRect = nav.getBoundingClientRect();
+      const btnRect = btn.getBoundingClientRect();
+      setPillStyle({
+        left: btnRect.left - navRect.left,
+        width: btnRect.width,
+        opacity: 1,
+      });
+    } else {
+      setPillStyle((prev) => ({ ...prev, opacity: 0 }));
+    }
+  }, [activeSection]);
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     handleClose();
@@ -48,13 +78,11 @@ const Navigation = () => {
 
   const handleOpen = () => {
     setMobileOpen(true);
-    // Wait for header collapse animation to finish, then show drawer
     setTimeout(() => setDrawerReady(true), 500);
   };
 
   const handleClose = () => {
     setDrawerReady(false);
-    // Wait for drawer exit animation, then restore header
     setTimeout(() => setMobileOpen(false), 400);
   };
 
@@ -71,15 +99,26 @@ const Navigation = () => {
             <img src={logo} alt="GM" className="h-9 w-auto transition-transform duration-500 group-hover:scale-105" />
           </div>
           <div className="w-px h-5 bg-border/50 mx-2" />
-          <div className="flex items-center gap-0.5">
+          <div ref={navRef} className="relative flex items-center gap-0.5">
+            {/* Sliding pill background */}
+            <motion.div
+              className="absolute top-0 h-full rounded-lg bg-primary/10"
+              animate={{
+                left: pillStyle.left,
+                width: pillStyle.width,
+                opacity: pillStyle.opacity,
+              }}
+              transition={{ type: "spring", stiffness: 350, damping: 30 }}
+            />
             {navLinks.map((link) => (
               <button
                 key={link.id}
+                ref={(el) => { if (el) buttonRefs.current.set(link.id, el); }}
                 onClick={() => scrollTo(link.id)}
-                className={`px-3 py-1.5 text-sm rounded-lg transition-all duration-300 ${
+                className={`relative z-10 px-3 py-1.5 text-sm rounded-lg transition-colors duration-200 ${
                   activeSection === link.id
-                    ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-white/[0.04]"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.label}
@@ -156,15 +195,10 @@ const Navigation = () => {
           >
             <div className="flex items-center justify-between p-6 border-b border-white/[0.06]">
               <img src={logo} alt="GM" className="h-8 w-auto" />
-              <button
-                onClick={handleClose}
-                className="p-2 text-muted-foreground hover:text-foreground transition-colors rounded-lg"
-                aria-label="Fechar menu"
-              >
+              <button onClick={handleClose} className="p-2 text-muted-foreground hover:text-foreground transition-colors rounded-lg" aria-label="Fechar menu">
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             <div className="flex-1 flex flex-col gap-1 p-5">
               {navLinks.map((link, i) => (
                 <motion.button
@@ -183,7 +217,6 @@ const Navigation = () => {
                 </motion.button>
               ))}
             </div>
-
             <div className="p-5 border-t border-white/[0.06]">
               <Button
                 onClick={() => scrollTo("contact")}

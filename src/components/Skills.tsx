@@ -25,7 +25,7 @@ const skillCategories = [
   {
     icon: Terminal,
     title: "DevOps e Tools",
-    skills: ["Git", "CI/CD", "Docker", "Vercel", "Linux"],
+    skills: ["Git", "CI/CD", "Docker", "Vercel"],
   },
   {
     icon: Users,

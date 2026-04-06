@@ -25,34 +25,34 @@ const experiences = [
   },
   {
     company: "Gálata Tecnologia",
-    role: "Suporte Técnico e Desenvolvedor Web",
-    period: "Atual",
+    role: "Engenheiro Líder de Suporte",
+    period: "Abr 2025 / Atual",
     current: true,
     description: [
-      "Suporte ao cliente e resolução de problemas via tickets",
-      "Desenvolvimento e migração de sites",
-      "Trabalho em equipe junto ao time de desenvolvimento",
+      "Gestão integral da operação de suporte técnico corporativo",
+      "Liderança técnica em migrações complexas de sistemas",
+      "Manutenção de infraestrutura crítica em ambientes web",
     ],
   },
   {
-    company: "Wolfex",
-    role: "Tech Lead e Desenvolvedor",
-    period: "2025/2026",
+    company: "Volpe Marketing Digital",
+    role: "Diretor de Tecnologia (CTO) e Co-Fundador",
+    period: "Jul 2024 / Jun 2025",
     current: false,
     description: [
-      "Liderança técnica da refatoração completa do sistema de logística",
-      "Nova arquitetura, nova interface, melhor performance",
+      "Liderança técnica e estratégica focada em produtos digitais e automação de marketing",
+      "Desenvolvimento e engenharia de toda a infraestrutura tecnológica de vendas",
+      "Faturamento superior a R$ 180.000 em apenas 6 meses",
     ],
   },
   {
-    company: "Condor",
-    role: "Desenvolvedor Full-Stack",
-    period: "2025/2026",
+    company: "UpSites",
+    role: "Engenheiro de Sistemas Web",
+    period: "Mar 2022 / Fev 2024",
     current: false,
     description: [
-      "Construção completa do sistema de facilities para gestão de operações",
-      "Construção completa do sistema de contratos que reduziu o processo de 10 dias para 1 dia",
-      "Automação de fluxos e assinaturas digitais",
+      "Desenvolvimento e sustentação de sistemas web focados em conversão, segurança e alta performance",
+      "Atuação direta na resolução de problemas estruturais e otimização de interfaces web",
     ],
   },
 ];
@@ -90,10 +90,10 @@ const Experience = () => {
                         </div>
                         <p className="text-sm text-muted-foreground font-medium mt-1">{exp.company}</p>
                       </div>
-                      <ul className="space-y-1">
+                      <ul className="space-y-1.5">
                         {exp.description.map((item, j) => (
-                          <li key={j} className="text-muted-foreground text-sm flex items-start gap-2">
-                            <span className="text-primary/60 mt-1.5 text-[6px]">●</span>
+                          <li key={j} className="text-muted-foreground text-sm leading-5 flex gap-2">
+                            <span className="text-primary/60 text-[5px] leading-5 shrink-0">●</span>
                             <span>{item}</span>
                           </li>
                         ))}
